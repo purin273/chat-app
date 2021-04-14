@@ -6,7 +6,9 @@ import { useProfile } from '../context/profile.context';
 
 const PrivateRoute = ({children, ...routeProps}) => {
 
-  const { profile, isLoading }= useProfile();
+  
+
+  const {profile, isLoading} = useProfile();
 
 
 if( isLoading && !profile){

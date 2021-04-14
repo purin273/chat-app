@@ -6,8 +6,10 @@ const ProfileContext = createContext();
 
 export const ProfileProvider = ({children}) =>{
 
-  const {profile,setProfile} = useState(false);
-  const [isLoading,setIsLoading] = useState(true);
+ 
+
+  const [profile,setProfile] = useState(false);
+  const {isLoading,setIsLoading} = useState(true);
   
   useEffect(()=>{
 
@@ -50,9 +52,9 @@ export const ProfileProvider = ({children}) =>{
 
     
     }
-  },[]);
+  });
 
-  return (<ProfileContext.Provider value={{isLoading,profile}} >
+  return (<ProfileContext.Provider value={{ isLoading, profile }} >
   {children}
   </ProfileContext.Provider>)
 }
