@@ -30,7 +30,7 @@ export const ProfileProvider = ({children}) =>{
             
             setProfile(data);
             setIsLoading(false);
-        })
+        });
         
        
 
